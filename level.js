@@ -11,7 +11,7 @@ export default class Level {
     tileMapImgHeight; //Le dimensioni della mappa da cui recupero i tile
     tileMapImageWidth;
     obstaclesVector = [];
-    constructor(level_width, level_height, tile_width, tile_height, terra, erba,mare, barca, strada, tileMapsrc, tileMapImgHeight, tileMapImageWidth) {
+    constructor(level_width, level_height, tile_width, tile_height, prato,mare,ostacoli, tileMapsrc, tileMapImgHeight, tileMapImageWidth) {
         this.level_width = level_width;
         this.level_height = level_height;
         this.tile_width = tile_width;

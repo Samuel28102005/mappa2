@@ -9,8 +9,8 @@ export default class GameArea {
 
     this.ninja= new AnimatedObject(NinjaSprites.running,60,60,10,120);
     this.level = new Level(
-      20,
-      20,
+      32,
+      32,
       32,
       32,
       Level1.prato,
@@ -22,8 +22,8 @@ export default class GameArea {
     );
 
     this.canvas = document.getElementById("gameArea");
-    this.canvas.width = 640;
-    this.canvas.height = 640;
+    this.canvas.width = 1024;
+    this.canvas.height = 1024;
     this.context = this.canvas.getContext("2d");
     this.interval = setInterval(this.updateGameArea, 20); //ogni 20 ms chiamo il metodo updateGameArea
     document.addEventListener("keydown", this.move);
@@ -50,7 +50,7 @@ export default class GameArea {
     this.ninja.update(this.obstaclesVector)
     this.ninja.draw(this.context) 
    };
-    move = e => {andriolli
+    move = e => {
       switch (e.key) {
         case "w":
           this.ninja.speedY = -2;
