@@ -16,11 +16,9 @@ export default class Level {
         this.level_height = level_height;
         this.tile_width = tile_width;
         this.tile_height = tile_height;
-        this.terra = terra;
-        this.erba = erba;
+        this.prato = prato;
         this.mare = mare;
-        this.barca = barca;
-        this.strada = strada;
+        this.ostacoli = ostacoli;
         this.tileMapImage = new Image(this.width, this.height);
         this.tileMapImage.src = tileMapsrc;
         this.tileMapImgHeight = tileMapImgHeight;
@@ -31,11 +29,9 @@ export default class Level {
 
     draw(canvasContext) {
         //Disegno l'acqua
-       this.drawLayer(this.terra, canvasContext);
-       this.drawLayer(this.erba, canvasContext);
+       this.drawLayer(this.prato, canvasContext);
        this.drawLayer(this.mare, canvasContext);
-       this.drawLayer(this.barca, canvasContext);
-       this.drawLayer(this.strada,canvasContext);
+       this.drawLayer(this.ostacoli,canvasContext);
        
     }
 
